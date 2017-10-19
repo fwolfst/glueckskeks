@@ -1,6 +1,7 @@
 require "glueckskeks/version"
 
 require 'glueckskeks/corpus_reader'
+require 'glueckskeks/collapser'
 require 'glueckskeks/substitutor'
 
 module Glueckskeks
