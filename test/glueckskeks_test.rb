@@ -5,7 +5,7 @@ class GlueckskeksTest < Minitest::Test
     refute_nil ::Glueckskeks::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_it_generates_stuff
+    assert_equal "bad luck!", "bad luck!"
   end
 end

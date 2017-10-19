@@ -1,5 +1,9 @@
 require "glueckskeks/version"
 
+require 'glueckskeks/corpus_reader'
+
 module Glueckskeks
-  # Your code goes here...
+  def self.generate
+    "bad luck!"
+  end
 end
