@@ -1,12 +1,16 @@
 # Glueckskeks
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/glueckskeks`. To experiment with that code, run `bin/console` for an interactive prompt.
+Use 'corpus' files specified in `corpus/` to create random phrases (or other things).
 
-TODO: Delete this and the text above, and describe your gem
+To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To install the gem (to use its executable):
+
+    $ gem install glueckskeks
+
+To play with its functionality from your own (ruby) code dd this line to your application's Gemfile:
 
 ```ruby
 gem 'glueckskeks'
@@ -16,13 +20,37 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install glueckskeks
-
 ## Usage
 
-TODO: Write usage instructions here
+Put files in `corpus/` that list possible values (one per line), e.g.
+
+```
+$ cat corpus/base.corpus
+<adj> <noun>
+$ cat corpus/adj.corpus
+black
+white
+$ cat noun.corpus
+cat
+dog
+```
+
+. That example should show that there are three files, `corpus/base.corpus`, `corpus/adj.corpus` and `corpus/noun.corpus` with the respective content.
+The `base.corpus` file will be read first and stuff in dangerous brackets (`<stuff>`) will be replaced by **one of the values of the respective file** (`corpus/stuff.corpus`, or in the example above, `adj.corpus` and `noun.corpus` respectively.  Note that thes "variable"-names do not include the file ending `.corpus`.
+
+To produce a random selection, execute `glueckskeks` (depending on your setup this might be `bundle exec exe/glueckskeks`), e.g.
+
+```
+$ glueckskeks
+black cat
+-> bc
+```
+
+The last line will be your phrase in passwordish-abbreviation.
+
+## "Gluckskeks" wtf - where are the vowels
+
+"Glueckskeks" is the German term for the wisdom-containing thing that you get served e.g. in chinese restaurants (in Germany).
 
 ## Development
 
@@ -32,5 +60,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/glueckskeks. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/fwolfst/glueckskeks. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
