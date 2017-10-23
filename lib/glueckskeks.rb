@@ -17,6 +17,15 @@ module Glueckskeks
   end
 
   def self.generate
-    "bad luck!"
+    @corpus = CorpusReader.read_corpus_files
+    if @corpus&.empty?
+      STDERR.puts "Empty corpus, are any data files present in ./corpus ?"
+      exit 1
+    end
+    if @corpus['base'].nil? || @corpus['base'].empty?
+      STDERR.puts "Corpus does not contain a base (corpus/base.corpus) file, or it does not contain any patterns."
+      exit 2
+    end
+    Templater.fill(@corpus['base'].sample, @corpus)
   end
 end
