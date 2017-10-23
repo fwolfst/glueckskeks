@@ -1,5 +1,29 @@
 #!/usr/bin/env ruby
 
-require "glueckskeks"
+require 'glueckskeks'
+require 'optparse'
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME}"
+  opts.separator ""
+  opts.separator "Generate phrase from files in corpus/."
+  opts.separator ""
+
+  opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |o|
+    options[:debug] = o
+  end
+  opts.on_tail('--version', 'Show version and exit.') do
+    puts "#{$PROGRAM_NAME} #{Glueckskeks::VERSION}"
+    exit 0
+  end
+  opts.on('-h', '--help', 'Show this help and exit.') do
+    puts opts
+    exit 0
+  end
+end.parse!
+
+Glueckskeks.logger.level = options[:debug] ? Logger::DEBUG : Logger::INFO
 
 puts Glueckskeks.generate
