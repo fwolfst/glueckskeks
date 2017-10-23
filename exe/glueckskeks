@@ -26,4 +26,6 @@ end.parse!
 
 Glueckskeks.logger.level = options[:debug] ? Logger::DEBUG : Logger::INFO
 
-puts Glueckskeks.generate
+phrase = Glueckskeks.generate
+puts phrase
+puts Glueckskeks::Collapser.collapse(phrase)
