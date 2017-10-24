@@ -11,7 +11,8 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Use grammar(ish) files to create random phrases.}
   spec.description   = %q{Consume files that create a cheap grammar to create phrases, which might aid e.g. as password hint.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/fwolfst/glueckskeks"
+  spec.licenses      = ['GPL-3.0+']
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

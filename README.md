@@ -4,6 +4,8 @@ Use 'corpus' files specified in `corpus/` to create random phrases (or other thi
 
 To experiment with that code, run `bin/console` for an interactive prompt.
 
+Licensed under the GPLv3+, Copyright 2017 Felix Wolfsteller.
+
 ## Installation
 
 To install the gem (to use its executable):
