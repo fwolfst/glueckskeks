@@ -32,7 +32,7 @@ $ cat corpus/base.corpus
 $ cat corpus/adj.corpus
 black
 white
-$ cat noun.corpus
+$ cat corpus/noun.corpus
 cat
 dog
 ```
