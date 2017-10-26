@@ -11,8 +11,8 @@ optparse = OptionParser.new do |opts|
   opts.separator "Generate phrase from files in corpus/."
   opts.separator ""
 
-  opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |o|
-    options[:debug] = o
+  opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |d|
+    options[:debug] = d
   end
   opts.on_tail('--version', 'Show version and exit.') do
     puts "#{$PROGRAM_NAME} #{Glueckskeks::VERSION}"
