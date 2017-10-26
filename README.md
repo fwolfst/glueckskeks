@@ -12,7 +12,7 @@ To install the gem (to use its executable):
 
     $ gem install glueckskeks
 
-To play with its functionality from your own (ruby) code dd this line to your application's Gemfile:
+To play with its functionality from your own (ruby) code add this line to your application's Gemfile:
 
 ```ruby
 gem 'glueckskeks'
