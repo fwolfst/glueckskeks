@@ -13,6 +13,9 @@ module Glueckskeks
         lines.reject!(&:empty?)
 
         Glueckskeks.logger.debug "#{lines.count} valid line(s) found"
+        if lines.count == 0
+          Glueckskeks.logger.error "#{filename} does not contain any pattern"
+        end
         result_map[File.basename(file, '.corpus')] = lines
       end
 
