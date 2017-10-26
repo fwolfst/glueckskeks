@@ -18,7 +18,7 @@ module Glueckskeks
 
   def self.generate
     @corpus = CorpusReader.read_corpus_files
-    if @corpus&.empty?
+    if @corpus && @corpus.empty?
       STDERR.puts "Empty corpus, are any data files present in ./corpus ?"
       exit 1
     end
