@@ -3,14 +3,20 @@
 require 'glueckskeks'
 require 'optparse'
 
-options = {}
+options = {corpus: 'corpus', base: 'base'}
 
 optparse = OptionParser.new do |opts|
   opts.banner = "Usage: #{$PROGRAM_NAME}"
   opts.separator ""
-  opts.separator "Generate phrase from files in corpus/."
+  opts.separator "Generate phrase from files (default: in corpus/)."
   opts.separator ""
 
+  opts.on('-b', '--base=BASE', 'Start extension from BASE file (default: \'base\')') do |b|
+    options[:base] = b
+  end
+  opts.on('-c', '--corpus=DIRECTORY', 'Read .corpus files from DIRECTORY (default: \'./corpus\'') do |c|
+    options[:corpus] = c
+  end
   opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |d|
     options[:debug] = d
   end
@@ -26,6 +32,6 @@ end.parse!
 
 Glueckskeks.logger.level = options[:debug] ? Logger::DEBUG : Logger::INFO
 
-phrase = Glueckskeks.generate
+phrase = Glueckskeks.generate(options[:corpus], options[:base])
 puts phrase
 puts Glueckskeks::Collapser.collapse(phrase)

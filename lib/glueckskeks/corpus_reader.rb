@@ -1,9 +1,9 @@
 module Glueckskeks
   class CorpusReader
-    def self.read_corpus_files
+    def self.read_corpus_files(corpus_dir='corpus')
       result_map = {}
 
-      Dir.glob('corpus/*.corpus').each do |filename|
+      Dir.glob("#{corpus_dir}/*.corpus").each do |filename|
         Glueckskeks.logger.debug "Reading corpus file #{filename}"
         file = File.new(filename)
 
