@@ -14,7 +14,7 @@ optparse = OptionParser.new do |opts|
   opts.on('-b', '--base=BASE', 'Start extension from BASE file (default: \'base\')') do |b|
     options[:base] = b
   end
-  opts.on('-c', '--corpus=DIRECTORY', 'Read .corpus files from DIRECTORY (default: \'./corpus\'') do |c|
+  opts.on('-c', '--corpus=DIRECTORY', 'Read .corpus files from DIRECTORY (default: \'./corpus\')') do |c|
     options[:corpus] = c
   end
   opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |d|
