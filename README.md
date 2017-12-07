@@ -38,7 +38,7 @@ dog
 ```
 
 . That example should show that there are three files, `corpus/base.corpus`, `corpus/adj.corpus` and `corpus/noun.corpus` with the respective content.
-The `base.corpus` file will be read first and stuff in dangerous brackets (`<stuff>`) will be replaced by **one of the values of the respective file** (`corpus/stuff.corpus`, or in the example above, `adj.corpus` and `noun.corpus` respectively.  Note that thes "variable"-names do not include the file ending `.corpus`.
+The `base.corpus` file will be read first and stuff in dangerous brackets (`<stuff>`) will be replaced by **one of the values (== lines) of the respective file** (`corpus/stuff.corpus`, or in the example above, `adj.corpus` and `noun.corpus` respectively).  Note that thes "variable"-names do not include the file ending `.corpus`.
 
 To produce a random selection, execute `glueckskeks` (depending on your setup this might be `bundle exec exe/glueckskeks`), e.g.
 
@@ -48,11 +48,11 @@ black cat
 -> bc
 ```
 
-The last line will be your phrase in passwordish-abbreviation.
+The last line ("bc" in that example) will be your phrase in passwordish-abbreviation.
 
 ## "Gluckskeks" wtf - where are the vowels
 
-"Glueckskeks" is the German term for the wisdom-containing thing that you get served e.g. in chinese restaurants (in Germany).
+"Glueckskeks" is the German term for the wisdom-containing thing that you get served e.g. in chinese restaurants (in Germany).  Like, remember the internet-meme "That wasn't chicken"".
 
 ## Development
 
