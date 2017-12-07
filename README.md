@@ -50,6 +50,20 @@ black cat
 
 The last line ("bc" in that example) will be your phrase in passwordish-abbreviation.
 
+Note that the starting node ('base') and the directory where the corpus files are located can be changed.  Run `glueckskeks --help` to get this or a similar output:
+
+    $ glueckskeks --help
+    Usage: exe/glueckskeks
+    
+    Generate phrase from files (default: in corpus/).
+    
+        -b, --base=BASE                  Start extension from BASE file (default: 'base')
+        -c, --corpus=DIRECTORY           Read .corpus files from DIRECTORY (default: './corpus')
+        -d, --debug                      Print debug messages to STDOUT
+        -h, --help                       Show this help and exit.
+            --version                    Show version and exit.
+
+
 ## "Gluckskeks" wtf - where are the vowels
 
 "Glueckskeks" is the German term for the wisdom-containing thing that you get served e.g. in chinese restaurants (in Germany).  Like, remember the internet-meme "That wasn't chicken"".
