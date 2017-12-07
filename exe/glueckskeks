@@ -35,3 +35,6 @@ Glueckskeks.logger.level = options[:debug] ? Logger::DEBUG : Logger::INFO
 phrase = Glueckskeks.generate(options[:corpus], options[:base])
 puts phrase
 puts Glueckskeks::Collapser.collapse(phrase)
+
+# Leave the stage with grace.
+exit 0
