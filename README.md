@@ -4,7 +4,7 @@ Use 'corpus' files specified in `corpus/` to create random phrases (or other thi
 
 To experiment with that code, run `bin/console` for an interactive prompt.
 
-Licensed under the GPLv3+ (see the `COPYING` file included) , Copyright 2017 Felix Wolfsteller.
+Licensed under the GPLv3+ (see the `COPYING` file included) , Copyright 2017,2019 Felix Wolfsteller.
 
 ## Installation
 
