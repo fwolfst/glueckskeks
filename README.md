@@ -1,6 +1,6 @@
 # Glueckskeks
 
-Use 'corpus' files specified in `corpus/` to create random phrases (or other things).
+Use 'corpus' files specified in `corpus/` to create random phrases (or other things) on the command line.
 
 To experiment with that code, run `bin/console` for an interactive prompt.
 
