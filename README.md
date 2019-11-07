@@ -65,6 +65,29 @@ Note that the starting node ('base') and the directory where the corpus files ar
             --version                    Show version and exit.
 
 
+### As a library
+
+With 171 lines of code the rough idea should be easy to grasp.
+If you follow the pattern of files in `corpus`-files
+
+    require 'glueckskes'
+    
+    puts Glueckskeks.generate
+
+If you get your corpus from elsewhere
+
+    require 'glueckskes'
+    
+    corpus_data = {
+      'base' => ['<subj> are <pred>'],
+      'noun' => ['cats', 'dogs'],
+      'pred' => ['lovely', 'adorable']
+    }
+    
+    Glueckskeks::Templater.fill(corpus_data['base'].sample, corpus_data)
+    #=> e.g. 'cats are adorable'
+
+
 ## "Gluckskeks" wtf - where are the vowels
 
 "Glueckskeks" is the German term for the wisdom-containing thing that you get served e.g. in chinese restaurants (in Germany).  Like, remember the internet-meme "That wasn't chicken"".
