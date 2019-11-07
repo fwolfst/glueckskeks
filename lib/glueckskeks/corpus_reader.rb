@@ -1,5 +1,7 @@
 module Glueckskeks
   class CorpusReader
+    # Returned "Corpus"" is a map from a name (originating from filename)
+    # to the lines of that file
     def self.read_corpus_files(corpus_dir='corpus')
       result_map = {}
 
