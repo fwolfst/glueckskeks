@@ -60,6 +60,7 @@ Note that the starting node ('base') and the directory where the corpus files ar
         -b, --base=BASE                  Start extension from BASE file (default: 'base')
         -c, --corpus=DIRECTORY           Read .corpus files from DIRECTORY (default: './corpus')
         -d, --debug                      Print debug messages to STDOUT
+            --[no-]capitalize            Capitalize first letter of output (default: true)
         -h, --help                       Show this help and exit.
             --version                    Show version and exit.
 
