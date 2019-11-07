@@ -6,8 +6,8 @@ module Glueckskeks
         if !(corpus.has_key? type)
           Glueckskeks.logger.error "No corpus entry for #{type} found"
         end
-        replace_with =  corpus[type].sample
-        str.gsub!("\<#{type}\>", replace_with)
+        replace_with = corpus[type].sample
+        str.sub!("\<#{type}\>", replace_with)
       end
       str
     end
