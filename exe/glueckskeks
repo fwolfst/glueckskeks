@@ -3,7 +3,7 @@
 require 'glueckskeks'
 require 'optparse'
 
-options = {corpus: 'corpus', base: 'base'}
+options = {corpus: 'corpus', base: 'base', capitalize: true}
 
 optparse = OptionParser.new do |opts|
   opts.banner = "Usage: #{$PROGRAM_NAME}"
@@ -20,6 +20,9 @@ optparse = OptionParser.new do |opts|
   opts.on('-d', '--debug', 'Print debug messages to STDOUT') do |d|
     options[:debug] = d
   end
+  opts.on('--[no-]capitalize', 'Capitalize first letter of output (default: true)') do |c|
+    options[:capitalize] = c
+  end
   opts.on_tail('--version', 'Show version and exit.') do
     puts "#{$PROGRAM_NAME} #{Glueckskeks::VERSION}"
     exit 0
@@ -33,6 +36,10 @@ end.parse!
 Glueckskeks.logger.level = options[:debug] ? Logger::DEBUG : Logger::INFO
 
 phrase = Glueckskeks.generate(options[:corpus], options[:base])
+if options[:capitalize]
+  phrase = phrase[0].upcase + phrase[1..-1]
+end
+
 puts phrase
 puts Glueckskeks::Collapser.collapse(phrase)
 
